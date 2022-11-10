@@ -1,4 +1,4 @@
 What is the capital of India- 1-Delhi 2-Kolkata 3-others,1,
 What is the language spoken in Netherlands- 1-German 2-France 3-Dutch,3,
-What is the heighest mountain on Earth-  1-K2 2-Everest 3-Kanchenjunga,2
+What is the highest mountain on Earth-  1-K2 2-Everest 3-Kanchenjunga,2
 

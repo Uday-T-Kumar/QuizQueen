@@ -26,6 +26,27 @@ def qna(question):
            print("Wrong answer")
     return (score, lngt)
 
+
+def qna_file(question):
+    score = 0
+    fl=open("QuestionBank.txt","r")                     #diff
+    x=fl.read()                                         #diff
+    q=tuple(map(str,x.replace("\n","").split(',')))     #diff
+    lngt =len(q)
+    print(lngt)
+    print(question)
+    print((question*2)+1)
+    if (lngt!=question):
+        #ques = question-1
+        ans = input(q[(question*2)]+'>>')               #difference
+        if (str(ans)==str(q[(question*2)+1])):          #diff
+            print("Correct answer")
+            score=score+1
+        else:
+           print("Wrong answer")
+    return (score, lngt)
+
+
 def scoreboard(score, ques, msg):
 #Function to process the scoreboard and format it is diplayed in
     if (msg==1):
@@ -40,8 +61,10 @@ def main():
     ques = 0
     lngt = -1
     #msg = 0 #Can be used to define whether the scoreboard message is current or final
-    while (quiz=='Y' and ques!=lngt):
-        tscore, lngt = qna(ques)
+    #while (quiz=='Y' and (ques!=lngt or (ques*2)!=lngt)):
+    while (quiz=='Y' and (ques*2)!=lngt):
+        #tscore, lngt = qna(ques)
+        tscore, lngt = qna_file(ques)
         ques = ques+1
         score = score+tscore
         """
